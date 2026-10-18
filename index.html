@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BluRuf · Mantenimiento solar para empresas en Madrid</title>
+<meta name="description" content="Tu tejado solar está perdiendo dinero. Diagnóstico gratuito en 48 h, limpieza, inspección e informe para naves y empresas en Madrid.">
+<link rel="canonical" href="https://bluruf.com/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="BluRuf">
+<meta property="og:url" content="https://bluruf.com/">
+<meta property="og:title" content="BluRuf · Tu tejado solar está perdiendo dinero">
+<meta property="og:description" content="Diagnóstico gratuito de tu instalación en 48 h. Mantenimiento solar para naves y empresas en Madrid.">
+<meta property="og:image" content="https://bluruf.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0047AA">
+<style>
+@font-face{font-family:"Bricolage Grotesque";src:url(/fonts/bricolage.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Figtree";src:url(/fonts/figtree.woff2) format("woff2");font-weight:300 900;font-display:swap}
+</style>
+<style>
+:root{
+  --sky:#EEF3FF;      /* fondo claro, cielo de mediodía */
+  --blue:#0047AA;     /* azul BluRuf */
+  --navy:#061A47;     /* azul noche, texto y bloques oscuros */
+  --cell:#173E8F;     /* célula fotovoltaica */
+  --sun:#FCCB31;      /* amarillo solar */
+  --dust:#B9A27A;     /* polvo sobre el panel */
+  --roof:#C9CED8;     /* chapa de la cubierta */
+  --muted:#4E5B7A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{font-family:"Figtree",system-ui,sans-serif;font-size:18px;line-height:1.55;color:var(--navy);background:var(--sky);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,72px)}
+.display{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.035em;line-height:.95}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;font:700 17px "Figtree",sans-serif;border:0;border-radius:14px;padding:17px 26px;cursor:pointer;text-align:center;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-sun{background:var(--sun);color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-line{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
+
+.logo{display:inline-flex;align-items:center;line-height:0;text-decoration:none}
+.logo img{height:30px;width:auto;display:block}
+footer .logo img{height:28px}
+
+/* Cabecera */
+header{position:sticky;top:0;z-index:20;background:rgba(238,243,255,.85);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.nav nav{display:flex;gap:30px;font-weight:600;font-size:16px}
+.nav nav a{text-decoration:none;opacity:.75}
+.nav nav a:hover{opacity:1}
+.nav .btn{padding:12px 20px;font-size:15px;border-radius:12px}
+@media (max-width:880px){.nav nav{display:none}}
+
+/* ---------- Portada: el tejado que se limpia ---------- */
+.hero{padding:48px 0 0}
+.hero h1{font-size:clamp(52px,8.6vw,178px)}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:28px;flex-wrap:wrap}
+.hero-row p{font-size:21px;color:var(--muted);max-width:30em}
+.hero-row .ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+.roof-wrap{margin-top:56px;position:relative}
+.roof{position:relative;background:
+  repeating-linear-gradient(90deg,#BFC5D1 0 3px,#D3D8E1 3px 14px);
+  border-radius:28px;padding:clamp(14px,2vw,28px);box-shadow:0 30px 80px -30px rgba(6,26,71,.45);overflow:hidden;touch-action:none;cursor:crosshair;user-select:none}
+.panels{display:grid;grid-template-columns:repeat(var(--cols,14),1fr);gap:clamp(4px,.6vw,8px)}
+.panel{aspect-ratio:1/1.6;border-radius:3px;background:
+  linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,0) 45%),
+  repeating-linear-gradient(90deg,transparent 0 calc(16.66% - 1px),rgba(255,255,255,.28) calc(16.66% - 1px) 16.66%),
+  repeating-linear-gradient(0deg,transparent 0 calc(10% - 1px),rgba(255,255,255,.28) calc(10% - 1px) 10%),
+  var(--cell);box-shadow:inset 0 0 0 2px #9AA6BE}
+#dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.roof-hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--navy);color:#fff;font-weight:700;font-size:16px;padding:12px 20px;border-radius:999px;pointer-events:none;transition:opacity .4s;white-space:nowrap}
+.meter{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;background:#fff;border-radius:16px;padding:18px 24px;margin-top:-26px;position:relative;width:min(760px,92%);margin-left:auto;margin-right:auto;box-shadow:0 18px 40px -18px rgba(6,26,71,.35)}
+.meter small{display:block;font-size:13px;color:var(--muted);font-weight:600}
+.meter b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:30px;letter-spacing:-.03em}
+.bar{height:10px;background:#E3E8F3;border-radius:99px;overflow:hidden}
+.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--sun));transition:width .25s}
+.meter .gain{text-align:right}
+.meter .gain b{color:var(--blue)}
+.sim-note{text-align:center;font-size:13px;color:var(--muted);margin-top:12px}
+@media (max-width:640px){.meter{grid-template-columns:1fr 1fr;gap:12px 16px}.bar{grid-column:1/-1;grid-row:2}}
+
+/* ---------- Calculadora ---------- */
+.calc{background:var(--navy);color:#fff;margin-top:110px;padding:110px 0}
+.calc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:70px;align-items:center}
+.calc h2{font-size:clamp(40px,5.5vw,96px)}
+.calc p{color:#B8C6E6;font-size:19px;margin-top:20px;max-width:30em}
+.dial{background:#0D2660;border-radius:28px;padding:40px}
+.dial label{font-weight:600;color:#B8C6E6}
+.dial .count{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:64px;letter-spacing:-.04em;line-height:1;margin:6px 0 18px}
+.dial .count span{font-size:22px;color:#B8C6E6;font-weight:600;letter-spacing:0;margin-left:8px}
+input[type=range]{width:100%;appearance:none;height:8px;border-radius:99px;background:#1E3D84;outline:none}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:30px;height:30px;border-radius:50%;background:var(--sun);border:5px solid var(--navy);box-shadow:0 0 0 2px var(--sun);cursor:grab}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--sun);border:5px solid var(--navy);cursor:grab}
+.loss{margin-top:34px;padding-top:28px;border-top:1px solid #23428A}
+.loss small{color:#B8C6E6;font-weight:600}
+.loss .eur{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:clamp(34px,4.4vw,68px);letter-spacing:-.04em;color:var(--sun);line-height:1.05;white-space:nowrap}
+.loss em{display:block;font-style:normal;color:#8FA2CC;font-size:14px;margin-top:8px}
+.calc .btn{margin-top:28px;width:100%}
+@media (max-width:900px){.calc-grid{grid-template-columns:minmax(0,1fr);gap:40px}.dial{padding:28px 22px}}
+
+/* ---------- Pasos ---------- */
+.steps{padding:120px 0}
+.steps h2{font-size:clamp(36px,5vw,84px);max-width:16ch}
+.verbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:60px;border-top:2px solid var(--navy)}
+.verb{padding:26px 22px 0 0}
+.verb .n{font-weight:700;font-size:15px;color:var(--blue)}
+.verb h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:clamp(34px,4vw,54px);letter-spacing:-.04em;line-height:1;margin:10px 0 12px}
+.verb p{color:var(--muted);font-size:17px;max-width:22ch}
+@media (max-width:820px){.verbs{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}}
+
+/* ---------- Informe ---------- */
+.report{padding:0 0 120px}
+.report-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:70px;align-items:center}
+.report h2{font-size:clamp(36px,4.6vw,60px)}
+.report ul{list-style:none;margin-top:30px;display:grid;gap:20px}
+.report li{padding-left:34px;position:relative;font-size:18px}
+.report li::before{content:"";position:absolute;left:0;top:7px;width:18px;height:11px;background:var(--sun);border-radius:2px;transform:rotate(-22deg)}
+.report li b{display:block}
+.report li span{color:var(--muted)}
+.doc{background:#fff;border-radius:22px;padding:30px;box-shadow:0 30px 60px -28px rgba(6,26,71,.4)}
+.doc header{position:static;background:none;backdrop-filter:none;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted);margin-bottom:18px}
+.doc .tag{background:#FFF1BF;color:#6E5300;font-weight:700;font-size:12px;padding:4px 10px;border-radius:99px}
+.doc h4{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:24px;letter-spacing:-.02em;margin-bottom:18px}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ba div{border-radius:12px;aspect-ratio:4/3;position:relative;overflow:hidden}
+.ba div::after{content:attr(data-l);position:absolute;left:10px;bottom:10px;background:rgba(6,26,71,.85);color:#fff;font-size:12px;font-weight:700;padding:4px 9px;border-radius:99px}
+.ba .before{background:radial-gradient(circle at 30% 40%,rgba(255,255,255,.75) 0 4%,transparent 5%),radial-gradient(circle at 70% 70%,rgba(255,255,255,.7) 0 3%,transparent 4%),linear-gradient(rgba(185,162,122,.75),rgba(160,138,100,.8)),var(--cell)}
+.ba .after{background:linear-gradient(135deg,rgba(255,255,255,.3),transparent 50%),repeating-linear-gradient(90deg,transparent 0 24%,rgba(255,255,255,.3) 24% 25%),var(--cell)}
+.kpis{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px}
+.kpis div{background:var(--sky);border-radius:12px;padding:14px}
+.kpis small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.kpis b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:24px}
+@media (max-width:900px){.report-grid{grid-template-columns:minmax(0,1fr);gap:50px}}
+
+/* ---------- Sectores ---------- */
+.marquee{background:var(--sun);overflow:hidden;padding:22px 0}
+.marquee div{display:flex;gap:48px;white-space:nowrap;width:max-content;animation:slide 40s linear infinite;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,44px);letter-spacing:-.03em}
+.marquee span::after{content:"";display:inline-block;width:.5em;height:.22em;background:var(--navy);border-radius:2px;transform:rotate(-22deg);margin-left:48px;vertical-align:middle}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- FAQ ---------- */
+.faq{padding:120px 0}
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:70px}
+.faq h2{font-size:clamp(36px,4.6vw,60px)}
+details{border-bottom:1.5px solid #C9D3EA;padding:24px 0}
+details:first-child{padding-top:0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-weight:700;font-size:21px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:28px;line-height:.8;color:var(--blue);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:12px}
+@media (max-width:860px){.faq-grid{grid-template-columns:minmax(0,1fr);gap:30px}}
+
+/* ---------- Contacto ---------- */
+.contact{background:var(--blue);color:#fff;padding:110px 0}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:70px;align-items:start}
+.contact h2{font-size:clamp(44px,6vw,88px)}
+.contact p{color:#CBD8F5;font-size:19px;margin-top:22px}
+.contact .ways{margin-top:34px;display:grid;gap:10px;font-weight:600}
+.contact .ways a{color:#fff}
+form{background:#fff;color:var(--navy);border-radius:24px;padding:34px;display:grid;gap:18px}
+form label{display:grid;gap:7px;font-weight:700;font-size:15px}
+input:not([type=range]):not([type=checkbox]),select{width:100%;min-width:0;font:500 17px "Figtree",sans-serif;padding:14px 16px;border:1.5px solid #D3DBEC;border-radius:12px;background:#fff;color:var(--navy)}
+input:focus,select:focus{outline:none;border-color:var(--blue)}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.legal{display:flex !important;gap:10px;align-items:flex-start;font-weight:500 !important;font-size:14px !important;color:var(--muted)}
+.legal input{flex:none;width:18px;height:18px;margin-top:2px}
+@media (max-width:860px){.contact-grid{grid-template-columns:minmax(0,1fr);gap:44px}.row2{grid-template-columns:minmax(0,1fr)}form{padding:26px 20px}}
+
+/* ---------- Red ---------- */
+.network{background:var(--navy);color:#fff;padding:90px 0}
+.network .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
+.network h2{font-size:clamp(38px,5vw,70px)}
+.network p{color:#B8C6E6;margin-top:16px;font-size:19px}
+@media (max-width:760px){.network .wrap{grid-template-columns:minmax(0,1fr)}}
+
+footer{background:#030F2B;color:#8C9BBA;padding:46px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
+footer nav{display:flex;gap:22px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+
+.wa{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+@media (prefers-reduced-motion:reduce){.marquee div{animation:none}html{scroll-behavior:auto}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://bluruf.com/#empresa","name":"BluRuf","url":"https://bluruf.com/","logo":"https://bluruf.com/img/logo.png","image":"https://bluruf.com/og.png","description":"Mantenimiento, limpieza e inspección de instalaciones solares para empresas en la Comunidad de Madrid. Diagnóstico gratuito en 48 h.","email":"info@bluruf.com","address":{"@type":"PostalAddress","streetAddress":"Calle Gobelas, 35, planta 1","postalCode":"28023","addressLocality":"Madrid","addressRegion":"Comunidad de Madrid","addressCountry":"ES"},"areaServed":{"@type":"AdministrativeArea","name":"Comunidad de Madrid"},"founder":{"@type":"Person","name":"Pablo Madrid de los Reyes"},"knowsAbout":["Limpieza de placas solares","Mantenimiento fotovoltaico","Inspección de instalaciones solares"]}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="/" class="logo" aria-label="BluRuf, inicio"><img src="/img/logo.svg" alt="BluRuf" width="160" height="39"></a>
+    <nav>
+      <a href="#calculadora">Cuánto pierdes</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#red">Para empresas de limpieza</a>
+    </nav>
+    <a href="#contacto" class="btn btn-sun">Diagnóstico gratis</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <h1 class="display">Tu tejado está perdiendo dinero.</h1>
+    <div class="hero-row">
+      <p>Polvo, aves y contaminación restan hasta un 10&nbsp;% a las placas de tu nave. Lo medimos gratis y, si compensa, las dejamos como el primer día.</p>
+      <div class="ctas">
+        <a href="#contacto" class="btn btn-sun">Pedir diagnóstico gratis</a>
+        <a href="#calculadora" class="btn btn-line">Calcular cuánto pierdo</a>
+      </div>
+    </div>
+
+    <div class="roof-wrap">
+      <div class="roof" id="roof" aria-label="Simulación: pasa el dedo o el ratón por las placas para limpiarlas">
+        <div class="panels" id="panels"></div>
+        <canvas id="dust"></canvas>
+        <div class="roof-hint" id="hint">Pasa el dedo por las placas</div>
+      </div>
+      <div class="meter" aria-live="polite">
+        <div><small>Tejado limpio</small><b id="pct">0 %</b></div>
+        <div class="bar"><span id="barfill"></span></div>
+        <div class="gain"><small>Producción recuperada</small><b id="gain">+0,0 %</b></div>
+      </div>
+      <p class="sim-note">Simulación de una cubierta vista desde el satélite, como la estudiamos en cada diagnóstico.</p>
+    </div>
+  </div>
+</section>
+
+<section class="calc" id="calculadora">
+  <div class="wrap calc-grid">
+    <div>
+      <h2 class="display">¿Cuánto se queda en tu tejado cada año?</h2>
+      <p>Mueve el selector hasta el número de paneles de tu nave. El cálculo usa el ahorro medio del autoconsumo industrial publicado por APPA y una pérdida por suciedad del 5 al 10&nbsp;%.</p>
+    </div>
+    <div class="dial">
+      <label for="n">Paneles en tu cubierta</label>
+      <div class="count"><output id="nOut">400</output><span>paneles</span></div>
+      <input type="range" id="n" min="50" max="2000" step="10" value="400">
+      <div class="loss">
+        <small>Dinero que pierdes al año por suciedad</small>
+        <div class="eur" id="eur">1.200 – 2.390 €</div>
+        <em>Estimación con paneles de 450 W y 133 € de ahorro por kW al año. Tu diagnóstico lo calcula con tus datos reales.</em>
+      </div>
+      <a href="#contacto" class="btn btn-sun">Quiero la cifra exacta de mi nave</a>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="como-funciona">
+  <div class="wrap">
+    <h2 class="display">De una captura de pantalla a un tejado limpio.</h2>
+    <div class="verbs">
+      <div class="verb"><span class="n">1</span><h3>Mides.</h3><p>Nos mandas una captura de tu inversor. En 48 h sabes cuánto pierdes.</p></div>
+      <div class="verb"><span class="n">2</span><h3>Decides.</h3><p>Estudiamos tu cubierta y te damos un precio cerrado.</p></div>
+      <div class="verb"><span class="n">3</span><h3>Limpiamos.</h3><p>Equipos con prevención y seguro, a la hora que no frene tu nave.</p></div>
+      <div class="verb"><span class="n">4</span><h3>Lo ves.</h3><p>Informe con fotos y producción. Con plan anual, no vuelves a acordarte.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="report">
+  <div class="wrap report-grid">
+    <div>
+      <h2 class="display">Mantenimiento solar, con pruebas.</h2>
+      <ul>
+        <li><b>Limpieza profesional</b><span>Agua tratada y cepillos específicos, sin químicos agresivos.</span></li>
+        <li><b>Inspección visual</b><span>Roturas, fijaciones, cableado y sombras nuevas.</span></li>
+        <li><b>Informe de cada servicio</b><span>Fotos y producción antes y después. Útil para tus auditorías.</span></li>
+        <li><b>Plan anual</b><span>Limpiezas programadas y seguimiento de tu producción.</span></li>
+      </ul>
+    </div>
+    <article class="doc" aria-label="Ejemplo de informe">
+      <header><span>Informe de servicio BluRuf</span><span class="tag">Ejemplo</span></header>
+      <h4>Nave logística en Coslada · 400 paneles</h4>
+      <div class="ba"><div class="before" data-l="Antes"></div><div class="after" data-l="Después"></div></div>
+      <div class="kpis">
+        <div><small>Producción</small><b>+8,4 %</b></div>
+        <div><small>Ahorro al año</small><b>2.010 €</b></div>
+        <div><small>Incidencias</small><b>1</b></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="marquee" aria-label="Sectores: logística, industria, agroalimentaria, áridos, reciclaje, retail">
+  <div aria-hidden="true">
+    <span>Logística</span><span>Industria</span><span>Agroalimentaria</span><span>Áridos</span><span>Reciclaje</span><span>Retail</span>
+    <span>Logística</span><span>Industria</span><span>Agroalimentaria</span><span>Áridos</span><span>Reciclaje</span><span>Retail</span>
+  </div>
+</div>
+
+<section class="faq" id="preguntas">
+  <div class="wrap faq-grid">
+    <h2 class="display">Antes de limpiar tus placas, lee esto.</h2>
+    <div>
+      <details open><summary>¿Cada cuánto hay que limpiarlas?</summary><p>En Madrid, 1 o 2 veces al año. En zonas con polvo o aves, más. El diagnóstico te lo dice con tus datos.</p></details>
+      <details><summary>¿Compensa siempre?</summary><p>No. Por eso medimos antes de proponerte nada.</p></details>
+      <details><summary>¿Y la seguridad?</summary><p>Trabajar en altura exige formación, líneas de vida y seguro. Lo revisamos antes de que nadie suba.</p></details>
+      <details><summary>¿Paráis mi actividad?</summary><p>No. Trabajamos en cubierta y a tu horario.</p></details>
+      <details><summary>¿Dónde trabajáis?</summary><p>Empezamos en la Comunidad de Madrid. Si tienes naves en otras zonas, cuéntanoslo.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 class="display">Tres preguntas. Cuarenta y ocho horas.</h2>
+      <p>Cuéntanos dónde está tu nave y te decimos cuánto está perdiendo. Gratis y sin compromiso.</p>
+      <div class="ways">
+        <a href="mailto:info@bluruf.com">info@bluruf.com</a>
+      </div>
+    </div>
+    <form name="diagnostico" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+      <input type="hidden" name="form-name" value="diagnostico">
+      <p hidden><label>No rellenar <input name="bot-field"></label></p>
+      <label>¿Dónde está tu nave?<input name="ubicacion" placeholder="Polígono o municipio" required></label>
+      <label>¿Cuántos paneles tiene, más o menos?
+        <select name="paneles" required>
+          <option value="">Elige una opción</option>
+          <option>Menos de 100</option><option>100 a 300</option><option>300 a 1.000</option><option>Más de 1.000</option><option>No lo sé</option>
+        </select>
+      </label>
+      <label>¿Cómo te contactamos?
+        <span class="row2"><input name="nombre" placeholder="Nombre y empresa" required><input name="contacto" placeholder="Correo o teléfono" required></span>
+      </label>
+      <label class="legal"><input type="checkbox" name="privacidad" required><span>Acepto la <a href="/privacidad.html">política de privacidad</a>. Solo usaremos tus datos para responder a tu solicitud.</span></label>
+      <button class="btn btn-navy" type="submit">Pedir diagnóstico gratis</button>
+    </form>
+  </div>
+</section>
+
+<section class="network" id="red">
+  <div class="wrap">
+    <div>
+      <h2 class="display">Tú pones el equipo. Nosotros, los clientes.</h2>
+      <p>¿Tienes una empresa de limpieza de placas? Estamos formando la red fundadora en Madrid, con plazas limitadas por zona.</p>
+    </div>
+    <a href="/red.html" class="btn btn-sun">Entrar en la red</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="/" class="logo"><img src="/img/logo-blanco.svg" alt="BluRuf" width="150" height="37"></a>
+    <span>Mantenimiento solar para empresas en la Comunidad de Madrid</span>
+    <nav>
+      <a href="/aviso-legal.html">Aviso legal</a>
+      <a href="/privacidad.html">Privacidad</a>
+      <a href="/cookies.html">Cookies</a>
+      <span>© 2026 BluRuf</span>
+    </nav>
+  </div>
+</footer>
+
+
+<script>
+/* ---------- Tejado: polvo que se limpia al pasar el dedo ---------- */
+(function(){
+  const roof = document.getElementById('roof');
+  const grid = document.getElementById('panels');
+  const cv = document.getElementById('dust');
+  const ctx = cv.getContext('2d');
+  const pctEl = document.getElementById('pct'), gainEl = document.getElementById('gain'), bar = document.getElementById('barfill'), hint = document.getElementById('hint');
+  const MAX_GAIN = 8.4; // % de producción recuperada con el tejado limpio (ejemplo)
+  let cleaned = 0, touched = false;
+
+  function build(){
+    const narrow = window.innerWidth < 640;
+    const cols = narrow ? 7 : 14, rows = narrow ? 4 : 3;
+    grid.style.setProperty('--cols', cols);
+    grid.innerHTML = '<div class="panel"></div>'.repeat(cols*rows);
+    paint();
+  }
+
+  function paint(){
+    const r = roof.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
+    cv.width = r.width*dpr; cv.height = r.height*dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.fillStyle = 'rgba(176,152,110,0.86)';
+    ctx.fillRect(0,0,r.width,r.height);
+    // grano de polvo
+    for(let i=0;i<r.width*r.height/45;i++){
+      ctx.fillStyle = Math.random()<.5 ? 'rgba(120,98,62,.35)' : 'rgba(225,210,180,.35)';
+      ctx.fillRect(Math.random()*r.width, Math.random()*r.height, 1.6, 1.6);
+    }
+    // manchas de aves
+    for(let i=0;i<r.width/45;i++){
+      const x=Math.random()*r.width, y=Math.random()*r.height, s=3+Math.random()*7;
+      ctx.fillStyle='rgba(245,242,235,.85)';
+      ctx.beginPath(); ctx.ellipse(x,y,s,s*.7,Math.random()*3,0,7); ctx.fill();
+    }
+    cleaned = 0; update();
+  }
+
+  function wipe(x,y){
+    const r = roof.getBoundingClientRect();
+    const brush = Math.max(28, r.width/22);
+    ctx.globalCompositeOperation = 'destination-out';
+    const g = ctx.createRadialGradient(x,y,0,x,y,brush);
+    g.addColorStop(0,'rgba(0,0,0,1)'); g.addColorStop(.7,'rgba(0,0,0,.9)'); g.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x,y,brush,0,7); ctx.fill();
+  }
+
+  let last = 0;
+  function measure(){
+    const now = performance.now(); if(now-last<120) return; last = now;
+    const d = ctx.getImageData(0,0,cv.width,cv.height).data;
+    let clear=0, n=0;
+    for(let i=3;i<d.length;i+=4*97){ n++; if(d[i]<60) clear++; }
+    cleaned = Math.min(100, Math.round(clear/n*100/0.97));
+    update();
+  }
+  function update(){
+    pctEl.textContent = cleaned + ' %';
+    bar.style.width = cleaned + '%';
+    gainEl.textContent = '+' + (MAX_GAIN*cleaned/100).toFixed(1).replace('.',',') + ' %';
+  }
+
+  function pos(e){ const r = roof.getBoundingClientRect(); return [e.clientX-r.left, e.clientY-r.top]; }
+  let down=false;
+  roof.addEventListener('pointerdown', e=>{ down=true; first(); wipe(...pos(e)); measure(); });
+  roof.addEventListener('pointermove', e=>{ if(down || e.pointerType==='mouse'){ first(); wipe(...pos(e)); measure(); } });
+  window.addEventListener('pointerup', ()=>{ down=false; measure(); });
+  function first(){ if(!touched){ touched=true; hint.style.opacity=0; } }
+
+  // Una pasada de demostración al cargar
+  function demo(){
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const r = roof.getBoundingClientRect(); let t=0;
+    const step = ()=>{ if(touched) return; t+=0.012;
+      const x = r.width*(0.08+0.3*t), y = r.height*(0.5+0.28*Math.sin(t*9));
+      wipe(x,y); if(t<1){ requestAnimationFrame(step);} else { measure(); } };
+    setTimeout(()=>requestAnimationFrame(step), 700);
+  }
+
+  let rt; window.addEventListener('resize', ()=>{ clearTimeout(rt); rt=setTimeout(build,200); });
+  build(); demo();
+})();
+
+/* ---------- Calculadora ---------- */
+(function(){
+  const n = document.getElementById('n'), out = document.getElementById('nOut'), eur = document.getElementById('eur');
+  const fmt = v => (Math.round(v/10)*10).toLocaleString('de-DE');
+  function calc(){
+    const p = +n.value, kw = p*0.45, saving = kw*133;
+    out.textContent = p.toLocaleString('de-DE');
+    eur.textContent = fmt(saving*0.05) + ' – ' + fmt(saving*0.10) + ' €';
+    const pct = (p-n.min)/(n.max-n.min)*100;
+    n.style.background = `linear-gradient(90deg,#F5B800 ${pct}%,#1E3D84 ${pct}%)`;
+  }
+  n.addEventListener('input', calc); calc();
+})();
+</script>
+</body>
+</html>
