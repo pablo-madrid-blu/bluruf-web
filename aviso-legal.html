@@ -16,23 +16,23 @@
 @font-face{font-family:"Figtree";src:url(/fonts/figtree.woff2) format("woff2");font-weight:300 900;font-display:swap}
 </style>
 <style>
-:root{--sky:#EEF3FF;--blue:#0047AA;--navy:#061A47;--sun:#FCCB31;--muted:#4E5B7A}
+:root{--sky:#F3F6FC;--blue:#0047AA;--navy:#061A47;--sun:#FCCB31;--muted:#4E5B7A}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{overflow-x:clip}
 body{font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.65;color:var(--navy);background:var(--sky);-webkit-font-smoothing:antialiased}
 a{color:var(--blue)}
-.wrap{max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,72px)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
 header{padding:22px 0}
-header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+header .wrap{max-width:908px;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .logo{display:inline-flex;align-items:center;line-height:0;text-decoration:none}
 .logo img{height:30px;width:auto;display:block}
 footer .logo img{height:28px}
 .back{font-weight:700;text-decoration:none;color:var(--navy);font-size:16px}
 .back:hover{color:var(--blue)}
 main{padding:clamp(40px,7vw,100px) 0 90px}
-.doc{max-width:760px}
+.doc{max-width:780px;margin:0 auto}
 .kicker{font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
-h1{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.035em;line-height:.95;font-size:clamp(46px,7vw,104px);margin:14px 0 18px}
+h1{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.022em;line-height:1.02;font-size:clamp(46px,7vw,104px);margin:14px 0 18px}
 .upd{color:var(--muted);font-size:15px;margin-bottom:48px}
 h2{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;font-size:clamp(24px,2.4vw,30px);line-height:1.15;margin:44px 0 12px}
 p,ul,table{margin-bottom:14px}
@@ -46,12 +46,21 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;ove
 th,td{text-align:left;padding:12px 14px;border-bottom:1px solid #E3E9F6;vertical-align:top}
 th{background:var(--navy);color:#fff;font-weight:600}
 .tw{overflow-x:auto}
-footer{background:#030F2B;color:#8C9BBA;padding:46px 0;font-size:15px}
-footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
-footer nav{display:flex;gap:22px;flex-wrap:wrap}
-footer a{text-decoration:none;color:inherit}
-footer a:hover,footer a[aria-current]{color:#fff}
 @media(max-width:560px){.card dl{grid-template-columns:minmax(0,1fr);gap:2px}.card dd{margin-bottom:10px}}
+
+/* Pie */
+.foot{background:var(--navy);color:#B8C6E6;position:relative;margin-top:60px;padding:90px 0 36px;font-size:15.5px}
+.foot::before{content:"";position:absolute;left:0;right:0;top:-59px;height:60px;background:var(--navy);clip-path:ellipse(75% 100% at 50% 100%)}
+.foot .logo img{height:30px}
+.fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:44px;text-align:center}
+.fcols h4{color:#fff;font-size:16px;font-weight:700;margin-bottom:14px}
+.fcols ul{list-style:none;display:grid;gap:10px}
+.fcols a{text-decoration:none;color:#B8C6E6}
+.fcols a:hover{color:#fff}
+.fbottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:60px;padding-top:24px;border-top:1px solid #1C3270;font-size:14px;color:#8C9BBA}
+@media(max-width:760px){.foot .logo{display:flex;justify-content:center}.fcols{grid-template-columns:minmax(0,1fr);gap:34px}.fbottom{justify-content:center;text-align:center}}
+.foot .logo img{height:30px}
+:root{--line:#DFE5F1}
 </style>
 </head>
 <body>
@@ -95,6 +104,30 @@ footer a:hover,footer a[aria-current]{color:#fff}
 <h2>9. Ley aplicable</h2>
 <p>Estas condiciones se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales que correspondan conforme a la ley; si quien usa la web es consumidor, serán los de su domicilio.</p>
 </article></div></main>
-<footer><div class="wrap"><a href="/" class="logo"><img src="/img/logo-blanco.svg" alt="BluRuf" width="150" height="37"></a><span>Mantenimiento solar para empresas en la Comunidad de Madrid</span><nav><a href="/aviso-legal.html" aria-current="page">Aviso legal</a><a href="/privacidad.html">Privacidad</a><a href="/cookies.html">Cookies</a><span>© 2026 BluRuf</span></nav></div></footer>
+<footer class="foot">
+  <div class="wrap">
+    <a href="/" class="logo"><img src="/img/logo-blanco.svg" alt="BluRuf" width="150" height="37"></a>
+    <div class="fcols">
+      <div><h4>Colabora con BluRuf</h4><ul>
+        <li><a href="/red.html">Red de partners</a></li>
+        <li><a href="/colabora.html#instaladores">Instaladores e ingenierías</a></li>
+        <li><a href="/colabora.html#equipo">Trabaja con nosotros</a></li>
+      </ul></div>
+      <div><h4>Enlaces de interés</h4><ul>
+        <li><a href="/#como-funciona">Cómo funciona</a></li>
+        <li><a href="/#calculadora">Calculadora de pérdidas</a></li>
+        <li><a href="/#preguntas">Preguntas frecuentes</a></li>
+        <li><a href="/#contacto">Diagnóstico gratis</a></li>
+        <li><a href="mailto:info@bluruf.com">info@bluruf.com</a></li>
+      </ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="/aviso-legal.html">Aviso legal</a></li>
+        <li><a href="/privacidad.html">Política de privacidad</a></li>
+        <li><a href="/cookies.html">Política de cookies</a></li>
+      </ul></div>
+    </div>
+    <div class="fbottom"><span>© 2026 BluRuf</span><span>Mantenimiento solar para empresas · España</span></div>
+  </div>
+</footer>
 </body>
 </html>

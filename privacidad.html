@@ -16,23 +16,23 @@
 @font-face{font-family:"Figtree";src:url(/fonts/figtree.woff2) format("woff2");font-weight:300 900;font-display:swap}
 </style>
 <style>
-:root{--sky:#EEF3FF;--blue:#0047AA;--navy:#061A47;--sun:#FCCB31;--muted:#4E5B7A}
+:root{--sky:#F3F6FC;--blue:#0047AA;--navy:#061A47;--sun:#FCCB31;--muted:#4E5B7A}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{overflow-x:clip}
 body{font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.65;color:var(--navy);background:var(--sky);-webkit-font-smoothing:antialiased}
 a{color:var(--blue)}
-.wrap{max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,72px)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
 header{padding:22px 0}
-header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+header .wrap{max-width:908px;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .logo{display:inline-flex;align-items:center;line-height:0;text-decoration:none}
 .logo img{height:30px;width:auto;display:block}
 footer .logo img{height:28px}
 .back{font-weight:700;text-decoration:none;color:var(--navy);font-size:16px}
 .back:hover{color:var(--blue)}
 main{padding:clamp(40px,7vw,100px) 0 90px}
-.doc{max-width:760px}
+.doc{max-width:780px;margin:0 auto}
 .kicker{font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
-h1{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.035em;line-height:.95;font-size:clamp(46px,7vw,104px);margin:14px 0 18px}
+h1{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.022em;line-height:1.02;font-size:clamp(46px,7vw,104px);margin:14px 0 18px}
 .upd{color:var(--muted);font-size:15px;margin-bottom:48px}
 h2{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;font-size:clamp(24px,2.4vw,30px);line-height:1.15;margin:44px 0 12px}
 p,ul,table{margin-bottom:14px}
@@ -46,12 +46,21 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;ove
 th,td{text-align:left;padding:12px 14px;border-bottom:1px solid #E3E9F6;vertical-align:top}
 th{background:var(--navy);color:#fff;font-weight:600}
 .tw{overflow-x:auto}
-footer{background:#030F2B;color:#8C9BBA;padding:46px 0;font-size:15px}
-footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
-footer nav{display:flex;gap:22px;flex-wrap:wrap}
-footer a{text-decoration:none;color:inherit}
-footer a:hover,footer a[aria-current]{color:#fff}
 @media(max-width:560px){.card dl{grid-template-columns:minmax(0,1fr);gap:2px}.card dd{margin-bottom:10px}}
+
+/* Pie */
+.foot{background:var(--navy);color:#B8C6E6;position:relative;margin-top:60px;padding:90px 0 36px;font-size:15.5px}
+.foot::before{content:"";position:absolute;left:0;right:0;top:-59px;height:60px;background:var(--navy);clip-path:ellipse(75% 100% at 50% 100%)}
+.foot .logo img{height:30px}
+.fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:44px;text-align:center}
+.fcols h4{color:#fff;font-size:16px;font-weight:700;margin-bottom:14px}
+.fcols ul{list-style:none;display:grid;gap:10px}
+.fcols a{text-decoration:none;color:#B8C6E6}
+.fcols a:hover{color:#fff}
+.fbottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:60px;padding-top:24px;border-top:1px solid #1C3270;font-size:14px;color:#8C9BBA}
+@media(max-width:760px){.foot .logo{display:flex;justify-content:center}.fcols{grid-template-columns:minmax(0,1fr);gap:34px}.fbottom{justify-content:center;text-align:center}}
+.foot .logo img{height:30px}
+:root{--line:#DFE5F1}
 </style>
 </head>
 <body>
@@ -59,7 +68,7 @@ footer a:hover,footer a[aria-current]{color:#fff}
 <main><div class="wrap"><article class="doc">
 <p class="kicker">Información legal</p>
 <h1>Política de privacidad</h1>
-<p class="upd">Última actualización: 16 de octubre de 2026</p>
+<p class="upd">Última actualización: 18 de octubre de 2026</p>
 <p>Aquí te explicamos, sin letra pequeña, qué datos recogemos, para qué y qué puedes hacer con ellos, conforme al Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018 (LOPDGDD).</p>
 
 <h2>1. Responsable del tratamiento</h2>
@@ -75,6 +84,8 @@ footer a:hover,footer a[aria-current]{color:#fff}
 <ul>
 <li><strong>Formulario de diagnóstico:</strong> ubicación de la nave, número aproximado de paneles, nombre, empresa y correo o teléfono.</li>
 <li><strong>Formulario de la red de empresas colaboradoras:</strong> datos de la empresa y de la persona de contacto, zona de trabajo y capacidad.</li>
+<li><strong>Formulario de colaboración para instaladores e ingenierías:</strong> datos de la empresa y de la persona de contacto, tipo de actividad, zona y mensaje.</li>
+<li><strong>Candidaturas de empleo:</strong> nombre, datos de contacto, ciudad, áreas de interés, perfil de LinkedIn, CV y mensaje, si decides enviarlos.</li>
 <li><strong>Correo, teléfono o WhatsApp:</strong> los datos que tú decidas enviarnos.</li>
 </ul>
 <p>No pedimos datos especialmente protegidos. Si nos escribes en nombre de una empresa, entendemos que puedes facilitarnos los datos de contacto que nos das.</p>
@@ -85,6 +96,8 @@ footer a:hover,footer a[aria-current]{color:#fff}
 <tr><td>Responder a tu solicitud y preparar el diagnóstico y la propuesta</td><td>Aplicación de medidas precontractuales a petición tuya (art. 6.1.b RGPD)</td></tr>
 <tr><td>Prestar el servicio contratado y coordinarlo con la empresa colaboradora que lo ejecute</td><td>Ejecución del contrato (art. 6.1.b RGPD)</td></tr>
 <tr><td>Valorar la entrada de una empresa en la red y ofrecerle trabajos</td><td>Medidas precontractuales y ejecución del acuerdo de colaboración (art. 6.1.b RGPD)</td></tr>
+<tr><td>Valorar propuestas de colaboración de instaladores e ingenierías</td><td>Medidas precontractuales a petición tuya (art. 6.1.b RGPD)</td></tr>
+<tr><td>Valorar tu candidatura para trabajar en BluRuf</td><td>Tu consentimiento al enviarla (art. 6.1.a RGPD), que puedes retirar en cualquier momento</td></tr>
 <tr><td>Cumplir obligaciones fiscales y contables</td><td>Obligación legal (art. 6.1.c RGPD)</td></tr>
 </table></div>
 <p>No enviamos publicidad sin tu consentimiento ni tomamos decisiones automatizadas que te afecten.</p>
@@ -92,13 +105,14 @@ footer a:hover,footer a[aria-current]{color:#fff}
 <h2>4. Cuánto tiempo los guardamos</h2>
 <ul>
 <li>Solicitudes que no acaban en contrato: hasta un año desde el último contacto.</li>
+<li>Candidaturas: hasta un año desde que las recibimos, salvo que nos pidas borrarlas antes.</li>
 <li>Clientes y empresas colaboradoras: mientras dure la relación y, después, durante los plazos que exige la ley (por ejemplo, seis años para la documentación contable).</li>
 </ul>
 
 <h2>5. Con quién los compartimos</h2>
 <ul>
 <li><strong>Empresas colaboradoras de la red.</strong> Para valorar un trabajo reciben una ficha sin datos que te identifiquen. Solo la empresa que lo realice recibe la dirección y el contacto necesarios para hacerlo, con obligación de confidencialidad.</li>
-<li><strong>Proveedores tecnológicos</strong> que tratan los datos por cuenta nuestra: Netlify, Inc. (alojamiento de la web y recepción de formularios) y Google (correo electrónico). Algunos están en Estados Unidos; las transferencias se amparan en el Marco de Privacidad de Datos UE-EE. UU. o en cláusulas contractuales tipo aprobadas por la Comisión Europea.</li>
+<li><strong>Proveedores tecnológicos</strong> que tratan los datos por cuenta nuestra: Netlify, Inc. (alojamiento de la web y recepción de formularios y archivos adjuntos) y Google (correo electrónico). Algunos están en Estados Unidos; las transferencias se amparan en el Marco de Privacidad de Datos UE-EE. UU. o en cláusulas contractuales tipo aprobadas por la Comisión Europea.</li>
 <li><strong>Administraciones públicas</strong>, cuando lo exija la ley.</li>
 </ul>
 <p>No vendemos ni cedemos tus datos con fines comerciales.</p>
@@ -113,6 +127,30 @@ footer a:hover,footer a[aria-current]{color:#fff}
 <h2>8. Cambios</h2>
 <p>Si cambiamos esta política, publicaremos aquí la nueva versión con su fecha.</p>
 </article></div></main>
-<footer><div class="wrap"><a href="/" class="logo"><img src="/img/logo-blanco.svg" alt="BluRuf" width="150" height="37"></a><span>Mantenimiento solar para empresas en la Comunidad de Madrid</span><nav><a href="/aviso-legal.html">Aviso legal</a><a href="/privacidad.html" aria-current="page">Privacidad</a><a href="/cookies.html">Cookies</a><span>© 2026 BluRuf</span></nav></div></footer>
+<footer class="foot">
+  <div class="wrap">
+    <a href="/" class="logo"><img src="/img/logo-blanco.svg" alt="BluRuf" width="150" height="37"></a>
+    <div class="fcols">
+      <div><h4>Colabora con BluRuf</h4><ul>
+        <li><a href="/red.html">Red de partners</a></li>
+        <li><a href="/colabora.html#instaladores">Instaladores e ingenierías</a></li>
+        <li><a href="/colabora.html#equipo">Trabaja con nosotros</a></li>
+      </ul></div>
+      <div><h4>Enlaces de interés</h4><ul>
+        <li><a href="/#como-funciona">Cómo funciona</a></li>
+        <li><a href="/#calculadora">Calculadora de pérdidas</a></li>
+        <li><a href="/#preguntas">Preguntas frecuentes</a></li>
+        <li><a href="/#contacto">Diagnóstico gratis</a></li>
+        <li><a href="mailto:info@bluruf.com">info@bluruf.com</a></li>
+      </ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="/aviso-legal.html">Aviso legal</a></li>
+        <li><a href="/privacidad.html">Política de privacidad</a></li>
+        <li><a href="/cookies.html">Política de cookies</a></li>
+      </ul></div>
+    </div>
+    <div class="fbottom"><span>© 2026 BluRuf</span><span>Mantenimiento solar para empresas · España</span></div>
+  </div>
+</footer>
 </body>
 </html>
