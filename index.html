@@ -24,6 +24,7 @@
 <style>
 @font-face{font-family:"Bricolage Grotesque";src:url(/fonts/bricolage.woff2) format("woff2");font-weight:200 800;font-display:swap}
 @font-face{font-family:"Figtree";src:url(/fonts/figtree.woff2) format("woff2");font-weight:300 900;font-display:swap}
+
 </style>
 <style>
 :root{--sky:#F3F6FC;--blue:#0047AA;--navy:#061A47;--cell:#173E8F;--sun:#FCCB31;--muted:#55627F;--line:#DFE5F1}
@@ -168,7 +169,7 @@ details p{color:var(--muted);margin-top:10px}
 .contact .kicker{color:var(--sun)}
 .contact h2{font-size:clamp(38px,4.8vw,64px);margin-top:12px}
 .contact p{color:#D3DFF7;font-size:18px;margin-top:20px}
-.contact .ways{margin-top:28px;font-weight:600}
+.contact .ways{margin-top:28px;font-weight:600;display:grid;gap:10px}
 .contact .ways a{color:#fff}
 form{background:#fff;color:var(--navy);border-radius:24px;padding:34px;display:grid;gap:18px;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
 form label{display:grid;gap:7px;font-weight:700;font-size:15px}
@@ -206,7 +207,7 @@ form .btn{width:100%}
 @media(max-width:760px){.foot .logo{display:flex;justify-content:center}.fcols{grid-template-columns:minmax(0,1fr);gap:34px}.fbottom{justify-content:center;text-align:center}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://bluruf.com/#empresa","name":"BluRuf","url":"https://bluruf.com/","logo":"https://bluruf.com/img/logo.png","image":"https://bluruf.com/og.png","description":"Mantenimiento, limpieza e inspección de instalaciones solares para empresas en toda España. Diagnóstico gratuito en 48 h.","email":"info@bluruf.com","address":{"@type":"PostalAddress","streetAddress":"Calle Gobelas, 35, planta 1","postalCode":"28023","addressLocality":"Madrid","addressRegion":"Comunidad de Madrid","addressCountry":"ES"},"areaServed":{"@type":"Country","name":"España"},"founder":{"@type":"Person","name":"Pablo Madrid de los Reyes"},"knowsAbout":["Limpieza de placas solares","Mantenimiento fotovoltaico","Inspección de instalaciones solares"]}
+{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://bluruf.com/#empresa","name":"BluRuf","url":"https://bluruf.com/","logo":"https://bluruf.com/img/logo.png","image":"https://bluruf.com/og.png","description":"Mantenimiento, limpieza e inspección de instalaciones solares para empresas en toda España. Diagnóstico gratuito en 48 h.","email":"info@bluruf.com","telephone":"+34 711 24 12 90","address":{"@type":"PostalAddress","streetAddress":"Calle Gobelas, 35, planta 1","postalCode":"28023","addressLocality":"Madrid","addressRegion":"Comunidad de Madrid","addressCountry":"ES"},"areaServed":{"@type":"Country","name":"España"},"founder":{"@type":"Person","name":"Pablo Madrid de los Reyes"},"knowsAbout":["Limpieza de placas solares","Mantenimiento fotovoltaico","Inspección de instalaciones solares"]}
 </script>
 </head>
 <body>
@@ -333,7 +334,7 @@ form .btn{width:100%}
     <span class="kicker">Diagnóstico gratis</span>
     <h2 class="display">¿Tu tejado está rindiendo? Vamos a comprobarlo.</h2>
     <p>Responde tres preguntas y te decimos cuánto está perdiendo tu nave. Gratis, sin compromiso y en 48 h.</p>
-    <div class="ways"><a href="mailto:info@bluruf.com">info@bluruf.com</a></div>
+    <div class="ways"><a href="tel:+34711241290">711 24 12 90</a><a href="mailto:info@bluruf.com">info@bluruf.com</a></div>
   </div>
   <form name="diagnostico" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
     <input type="hidden" name="form-name" value="diagnostico">
@@ -380,6 +381,7 @@ form .btn{width:100%}
         <li><a href="/#preguntas">Preguntas frecuentes</a></li>
         <li><a href="/#contacto">Diagnóstico gratis</a></li>
         <li><a href="mailto:info@bluruf.com">info@bluruf.com</a></li>
+        <li><a href="tel:+34711241290">711 24 12 90</a></li>
       </ul></div>
       <div><h4>Legal</h4><ul>
         <li><a href="/aviso-legal.html">Aviso legal</a></li>
