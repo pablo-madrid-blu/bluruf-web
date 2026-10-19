@@ -178,6 +178,10 @@ input:focus,select:focus{outline:none;border-color:var(--blue)}
 .row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
 .legal{display:flex !important;gap:10px;align-items:flex-start;font-weight:500 !important;font-size:14px !important;color:var(--muted)}
 .legal input{flex:none;width:18px;height:18px;margin-top:2px}
+form .opt{font-weight:500;color:var(--muted)}
+form .hint{font-weight:500;font-size:13px;color:var(--muted)}
+form input.file{padding:10px 12px;font-size:15px;color:var(--muted);background:var(--sky)}
+form input.file::file-selector-button{font:700 14px "Figtree",system-ui,sans-serif;border:0;background:#fff;color:var(--navy);padding:9px 14px;border-radius:999px;margin-right:12px;cursor:pointer;box-shadow:inset 0 0 0 1.5px var(--line)}
 form .btn{width:100%}
 @media(max-width:860px){.contact-grid{grid-template-columns:minmax(0,1fr)}.row2{grid-template-columns:minmax(0,1fr)}form{padding:26px 20px}}
 
@@ -207,7 +211,7 @@ form .btn{width:100%}
 @media(max-width:760px){.foot .logo{display:flex;justify-content:center}.fcols{grid-template-columns:minmax(0,1fr);gap:34px}.fbottom{justify-content:center;text-align:center}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://bluruf.com/#empresa","name":"BluRuf","url":"https://bluruf.com/","logo":"https://bluruf.com/img/logo.png","image":"https://bluruf.com/og.png","description":"Mantenimiento, limpieza e inspección de instalaciones solares para empresas en toda España. Diagnóstico gratuito en 48 h.","email":"info@bluruf.com","telephone":"+34 711 24 12 90","address":{"@type":"PostalAddress","streetAddress":"Calle Gobelas, 35, planta 1","postalCode":"28023","addressLocality":"Madrid","addressRegion":"Comunidad de Madrid","addressCountry":"ES"},"areaServed":{"@type":"Country","name":"España"},"founder":{"@type":"Person","name":"Pablo Madrid de los Reyes"},"knowsAbout":["Limpieza de placas solares","Mantenimiento fotovoltaico","Inspección de instalaciones solares"]}
+{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://bluruf.com/#empresa","name":"BluRuf","url":"https://bluruf.com/","logo":"https://bluruf.com/img/logo.png","image":"https://bluruf.com/og.png","description":"Mantenimiento, limpieza e inspección de instalaciones solares para empresas en toda España. Diagnóstico gratuito en 48 h.","email":"info@bluruf.com","telephone":"+34 711 24 12 90","address":{"@type":"PostalAddress","streetAddress":"Calle Gobelas, 35, planta 1","postalCode":"28023","addressLocality":"Madrid","addressRegion":"Comunidad de Madrid","addressCountry":"ES"},"areaServed":{"@type":"Country","name":"España"},"alternateName":["Bluruf","BluRuf Solar","Bluruf mantenimiento solar"],"sameAs":["https://www.linkedin.com/company/bluruf"],"founder":{"@type":"Person","name":"Pablo Madrid de los Reyes"},"knowsAbout":["Limpieza de placas solares","Mantenimiento fotovoltaico","Inspección de instalaciones solares"]}
 </script>
 </head>
 <body>
@@ -336,7 +340,7 @@ form .btn{width:100%}
     <p>Responde tres preguntas y te decimos cuánto está perdiendo tu nave. Gratis, sin compromiso y en 48 h.</p>
     <div class="ways"><a href="tel:+34711241290">711 24 12 90</a><a href="mailto:info@bluruf.com">info@bluruf.com</a></div>
   </div>
-  <form name="diagnostico" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+  <form name="diagnostico" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/gracias.html">
     <input type="hidden" name="form-name" value="diagnostico">
     <p hidden><label>No rellenar <input name="bot-field"></label></p>
     <label>¿Dónde está tu nave?<input name="ubicacion" placeholder="Polígono o municipio" required></label>
@@ -348,6 +352,10 @@ form .btn{width:100%}
     </label>
     <label>¿Cómo te contactamos?
       <span class="row2"><input name="nombre" placeholder="Nombre y empresa" required><input name="contacto" placeholder="Correo o teléfono" required></span>
+    </label>
+    <label>Captura de la app de tu inversor <span class="opt">(opcional, acelera el diagnóstico)</span>
+      <input type="file" name="captura" accept="image/*,.pdf" class="file">
+      <small class="hint">Una foto o captura de la producción mensual o anual. Máx. 5 MB.</small>
     </label>
     <label class="legal"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="/privacidad.html">política de privacidad</a>. Usaremos tus datos solo para responder a tu solicitud.</span></label>
     <button class="btn btn-navy" type="submit">Pedir diagnóstico gratis</button>
@@ -382,6 +390,7 @@ form .btn{width:100%}
         <li><a href="/#contacto">Diagnóstico gratis</a></li>
         <li><a href="mailto:info@bluruf.com">info@bluruf.com</a></li>
         <li><a href="tel:+34711241290">711 24 12 90</a></li>
+        <li><a href="https://www.linkedin.com/company/bluruf" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul></div>
       <div><h4>Legal</h4><ul>
         <li><a href="/aviso-legal.html">Aviso legal</a></li>
@@ -389,7 +398,7 @@ form .btn{width:100%}
         <li><a href="/cookies.html">Política de cookies</a></li>
       </ul></div>
     </div>
-    <div class="fbottom"><span>© 2026 BluRuf</span><span>Mantenimiento solar para empresas · España</span></div>
+    <div class="fbottom"><span>© 2026 BluRuf</span><span>Bluruf (BluRuf) · Mantenimiento solar para empresas · España</span></div>
   </div>
 </footer>
 
@@ -406,6 +415,9 @@ form .btn{width:100%}
   }
   n.addEventListener('input',calc);calc();
 })();
+</script>
+<script>
+(function(){const c=document.querySelector('input[name=captura]');if(!c)return;c.addEventListener('change',()=>{const f=c.files[0];c.setCustomValidity(f&&f.size>5*1024*1024?'El archivo supera los 5 MB.':'');c.reportValidity();});})();
 </script>
 </body>
 </html>
