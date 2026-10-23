@@ -2,3 +2,7 @@ https://bluruf.es/*      https://bluruf.com/:splat  301!
 https://www.bluruf.es/*  https://bluruf.com/:splat  301!
 http://bluruf.es/*       https://bluruf.com/:splat  301!
 http://www.bluruf.es/*   https://bluruf.com/:splat  301!
+
+# Copia antigua de la portada dentro de /img/: se redirige a la home
+/img/             /    301!
+/img/index.html   /    301!

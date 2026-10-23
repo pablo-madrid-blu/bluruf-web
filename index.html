@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BluRuf | Mantenimiento solar para empresas en España</title>
-<meta name="description" content="Tu tejado solar está perdiendo dinero. Diagnóstico gratuito en 48 h, limpieza, inspección e informe para naves y empresas en toda España.">
+<title>Limpieza de placas solares para empresas y naves | BluRuf</title>
+<meta name="description" content="Limpieza y mantenimiento de placas solares para naves y empresas en Madrid y toda España. Diagnóstico gratis en 48 h, limpieza, inspección e informe.">
 <link rel="canonical" href="https://bluruf.com/">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -12,8 +12,8 @@
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="BluRuf">
 <meta property="og:url" content="https://bluruf.com/">
-<meta property="og:title" content="BluRuf | Tu tejado solar está perdiendo dinero">
-<meta property="og:description" content="Diagnóstico gratuito de tu instalación en 48 h. Mantenimiento solar para naves y empresas en toda España.">
+<meta property="og:title" content="BluRuf | Limpieza de placas solares para empresas">
+<meta property="og:description" content="Tu tejado solar está perdiendo dinero. Diagnóstico gratis en 48 h, limpieza e informe para naves y empresas en toda España.">
 <meta property="og:image" content="https://bluruf.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
@@ -57,8 +57,9 @@ header.top{position:sticky;top:0;z-index:20;background:rgba(243,246,252,.82);bac
 .hero::before{content:"";position:absolute;left:50%;top:-80px;width:min(900px,120vw);height:520px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(0,71,170,.13),transparent);pointer-events:none;z-index:-1}
 .pill{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 16px 7px 8px;font-size:14px;font-weight:600;color:var(--muted)}
 .pill i{display:inline-block;width:22px;height:9px;background:var(--sun);border-radius:2px;transform:skewX(-20deg) rotate(-16deg)}
-.hero h1{font-size:clamp(44px,6.6vw,92px);margin:0 auto;max-width:13ch}
-.hero h1 span{color:var(--blue)}
+.hero .slogan{font-size:clamp(44px,6.6vw,92px);margin:0 auto;max-width:13ch}
+.hero .slogan span{color:var(--blue)}
+.hero .eyebrow{display:block;font:700 13px/1.4 "Figtree",system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
 .hero .lead{font-size:clamp(18px,1.6vw,21px);color:var(--muted);max-width:34em;margin:24px auto 0}
 .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
 .trust{margin-top:18px;font-size:14px;color:var(--muted);font-weight:600}
@@ -96,7 +97,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 
 /* Pasos */
 .steps{padding:clamp(80px,10vw,130px) 0}
-.steps h2{font-size:clamp(34px,4.4vw,58px);max-width:18ch;margin:12px auto 0}
+.steps h2{font-size:clamp(34px,4.4vw,58px);max-width:20ch;margin:12px auto 0}
 .verbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:56px;text-align:left}
 .verb{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
 .verb .n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--sky);color:var(--blue);font-weight:800;font-size:15px}
@@ -209,12 +210,82 @@ form .btn{width:100%}
 .fcols a:hover{color:#fff}
 .fbottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:60px;padding-top:24px;border-top:1px solid #1C3270;font-size:14px;color:#8C9BBA}
 @media(max-width:760px){.foot .logo{display:flex;justify-content:center}.fcols{grid-template-columns:minmax(0,1fr);gap:34px}.fbottom{justify-content:center;text-align:center}}
+/* Páginas de servicio y zona */
+.crumbs{font-size:14px;color:var(--muted);font-weight:600;padding-top:22px}
+.crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.crumbs li+li::before{content:"/";margin-right:6px;color:#A9B4CC}
+.crumbs a{text-decoration:none;color:var(--muted)}
+.crumbs a:hover{color:var(--blue)}
+.hero .eyebrow{display:block;font-weight:700;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
+.sub-hero{padding:clamp(36px,6vw,80px) 0 clamp(60px,8vw,96px)}
+.sub-hero h1{font-size:clamp(40px,5.8vw,80px);max-width:16ch}
+.block{padding:clamp(70px,9vw,120px) 0}
+.block.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.block h2{font-size:clamp(32px,4vw,54px);margin-top:12px;max-width:20ch}
+.split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,80px);align-items:start}
+.prose{font-size:18px;color:#24345C}
+.prose p+p{margin-top:16px}
+.prose h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:clamp(22px,2vw,27px);letter-spacing:-.015em;line-height:1.15;margin:34px 0 10px;color:var(--navy)}
+.prose ul,.prose ol{margin:14px 0 0 22px;display:grid;gap:8px}
+.prose strong{color:var(--navy)}
+.prose a{color:var(--blue);font-weight:600}
+.facts{list-style:none;display:grid;gap:14px;margin-top:6px}
+.facts li{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.block.alt .facts li{background:var(--sky)}
+.facts b{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:21px;letter-spacing:-.015em;line-height:1.2;margin-bottom:6px}
+.facts span{color:var(--muted);font-size:16px}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;font-size:15px}
+.block.alt .chips li{background:var(--sky)}
+.zones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:44px}
+.zone{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 22px;text-decoration:none;transition:transform .15s,border-color .15s}
+.zone:hover{transform:translateY(-2px);border-color:var(--blue)}
+.zone b{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:21px;letter-spacing:-.015em}
+.zone span{display:block;color:var(--muted);font-size:15px;margin-top:4px}
+.zone i{font-style:normal;color:var(--blue);font-weight:700}
+.block.alt .zone{background:var(--sky)}
+.more{margin-top:22px;color:var(--muted);font-size:16px}
+.cards4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:48px}
+.cards4 a{text-align:left;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;text-decoration:none;transition:transform .15s,border-color .15s}
+.cards4 a:hover{transform:translateY(-2px);border-color:var(--blue)}
+.cards4 small{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.cards4 b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:22px;letter-spacing:-.015em;line-height:1.12;margin:10px 0 8px}
+.cards4 span{color:var(--muted);font-size:15.5px;flex:1}
+.cards4 i{font-style:normal;font-weight:700;color:var(--blue);margin-top:16px}
+.seo-text{max-width:820px;margin:40px auto 0;text-align:left;font-size:17px;color:#33446B}
+.seo-text p+p{margin-top:14px}
+.seo-text a{color:var(--blue);font-weight:600}
+.toc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;position:sticky;top:96px}
+.toc b{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.toc ol{margin-left:18px;display:grid;gap:6px;font-size:16px}
+.toc a{text-decoration:none;color:var(--navy)}
+.toc a:hover{color:var(--blue)}
+.article{max-width:760px}
+.article h2{font-size:clamp(28px,3vw,40px);margin:56px 0 14px;max-width:none}
+.article h2:first-child{margin-top:0}
+.callout{background:var(--navy);color:#fff;border-radius:20px;padding:26px 28px;margin-top:30px}
+.callout p{color:#B8C6E6 !important}
+.callout b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:23px;letter-spacing:-.015em;display:block;margin-bottom:6px;color:#fff}
+.callout .btn{margin-top:18px}
+.do{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:20px}
+.do div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.do h3{margin:0 0 8px !important;font-size:20px !important}
+.do ul{margin:0 0 0 18px !important}
+.upd{font-size:14px;color:var(--muted);font-weight:600;margin-top:18px}
+@media(max-width:1000px){.cards4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.split,.guide-split{grid-template-columns:minmax(0,1fr)}.zones{grid-template-columns:repeat(2,minmax(0,1fr))}.toc{position:static}}
+@media(max-width:560px){.zones,.cards4,.do{grid-template-columns:minmax(0,1fr)}}
+.fcols{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1000px) and (min-width:761px){.fcols{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://bluruf.com/#empresa","name":"BluRuf","url":"https://bluruf.com/","logo":"https://bluruf.com/img/logo.png","image":["https://bluruf.com/img/logo-cuadrado.png","https://bluruf.com/img/logo-4x3.png","https://bluruf.com/og.png"],"description":"Mantenimiento, limpieza e inspección de instalaciones solares para empresas en toda España. Diagnóstico gratuito en 48 h.","email":"info@bluruf.com","telephone":"+34 711 24 12 90","address":{"@type":"PostalAddress","streetAddress":"Calle Gobelas, 35, planta 1","postalCode":"28023","addressLocality":"Madrid","addressRegion":"Comunidad de Madrid","addressCountry":"ES"},"areaServed":{"@type":"Country","name":"España"},"alternateName":["Bluruf","BluRuf Solar","Bluruf mantenimiento solar"],"sameAs":["https://www.linkedin.com/company/bluruf"],"founder":{"@type":"Person","name":"Pablo Madrid de los Reyes"},"knowsAbout":["Limpieza de placas solares","Mantenimiento fotovoltaico","Inspección de instalaciones solares"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://bluruf.com/#empresa","name":"BluRuf","url":"https://bluruf.com/","logo":"https://bluruf.com/img/logo.png","image":["https://bluruf.com/img/logo-cuadrado.png","https://bluruf.com/img/logo-4x3.png","https://bluruf.com/og.png"],"description":"Limpieza, inspección y mantenimiento de placas solares para naves y empresas en Madrid y toda España. Diagnóstico gratuito en 48 h.","email":"info@bluruf.com","telephone":"+34 711 24 12 90","address":{"@type":"PostalAddress","streetAddress":"Calle Gobelas, 35, planta 1","postalCode":"28023","addressLocality":"Madrid","addressRegion":"Comunidad de Madrid","addressCountry":"ES"},"areaServed":[{"@type":"Country","name":"España"},{"@type":"AdministrativeArea","name":"Comunidad de Madrid"}],"alternateName":["Bluruf","BluRuf Solar","Bluruf mantenimiento solar"],"sameAs":["https://www.linkedin.com/company/bluruf"],"founder":{"@type":"Person","name":"Pablo Madrid de los Reyes"},"knowsAbout":["Limpieza de placas solares","Limpieza de paneles solares","Mantenimiento fotovoltaico","Inspección de instalaciones solares"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Servicios de BluRuf","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Limpieza de placas solares en naves industriales","url":"https://bluruf.com/limpieza-placas-solares-naves-industriales/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mantenimiento de placas solares para empresas","url":"https://bluruf.com/mantenimiento-placas-solares/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnóstico gratuito de producción solar"},"price":"0","priceCurrency":"EUR"}]}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://bluruf.com/#web","name":"BluRuf","alternateName":["Bluruf","bluruf.com"],"url":"https://bluruf.com/","inLanguage":"es-ES","publisher":{"@id":"https://bluruf.com/#empresa"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cada cuánto hay que limpiarlas?","acceptedAnswer":{"@type":"Answer","text":"En general, 1 o 2 veces al año. En zonas secas, con polvo o con aves, más. El diagnóstico te lo dice con tus datos."}},{"@type":"Question","name":"¿Compensa siempre?","acceptedAnswer":{"@type":"Answer","text":"No. Por eso medimos antes de proponerte nada."}},{"@type":"Question","name":"¿Y la seguridad?","acceptedAnswer":{"@type":"Answer","text":"Trabajar en altura exige formación, líneas de vida y seguro. Lo revisamos antes de que nadie suba."}},{"@type":"Question","name":"¿Paráis mi actividad?","acceptedAnswer":{"@type":"Answer","text":"No. Trabajamos en cubierta y a tu horario."}},{"@type":"Question","name":"¿Cuánto cuesta limpiar placas solares?","acceptedAnswer":{"@type":"Answer","text":"Depende del número de paneles, del acceso a la cubierta y del tipo de suciedad. Por eso empezamos por el diagnóstico gratis: con tus datos te damos un precio cerrado, sin sorpresas."}},{"@type":"Question","name":"¿Con qué limpiáis los paneles?","acceptedAnswer":{"@type":"Answer","text":"Con agua tratada, baja en minerales para que no deje marcas, y cepillos específicos para placas. Nunca agua a presión ni productos agresivos. Te lo explicamos en nuestra guía para limpiar placas solares."}},{"@type":"Question","name":"¿Dónde trabajáis?","acceptedAnswer":{"@type":"Answer","text":"En toda España. Cuéntanos dónde está tu nave y en 48 h tienes tu diagnóstico. En la Comunidad de Madrid cubrimos todos los polígonos: mira nuestra página de limpieza de placas solares en Madrid."}}]}
 </script>
 </head>
 <body>
@@ -225,8 +296,9 @@ form .btn{width:100%}
 
 <main>
 <section class="hero"><div class="wrap">
-  <h1 class="display">Tu tejado solar <span>está perdiendo dinero.</span></h1>
-  <p class="lead">Polvo, aves y contaminación restan producción a las placas de tu nave sin que nadie lo vea desde abajo. En BluRuf lo medimos gratis y, si compensa, las dejamos como el primer día.</p>
+  <h1 class="eyebrow">Limpieza de placas solares para empresas</h1>
+  <p class="display slogan">Tu tejado solar <span>está perdiendo dinero.</span></p>
+  <p class="lead">Polvo, aves y contaminación restan producción a las placas solares de tu nave sin que nadie lo vea desde abajo. En BluRuf lo medimos gratis y, si compensa, las dejamos como el primer día.</p>
   <div class="ctas">
     <a href="#contacto" class="btn btn-blue">Pedir diagnóstico gratis →</a>
     <a href="#calculadora" class="btn btn-line">Calcular cuánto pierdo</a>
@@ -245,7 +317,7 @@ form .btn{width:100%}
 <section class="calc" id="calculadora"><div class="wrap calc-grid">
   <div>
     <span class="kicker">Calculadora</span>
-    <h2 class="display" style="margin-top:12px">¿Cuánto se queda en tu tejado cada año?</h2>
+    <h2 class="display" style="margin-top:12px">¿Cuánto pierden tus placas solares cada año?</h2>
     <p>Mueve el selector hasta el número de paneles de tu nave. El cálculo usa el ahorro medio del autoconsumo industrial publicado por APPA y una pérdida por suciedad del 5 al 10&nbsp;%.</p>
   </div>
   <div class="dial">
@@ -263,7 +335,7 @@ form .btn{width:100%}
 
 <section class="steps center" id="como-funciona"><div class="wrap">
   <span class="kicker">Cómo funciona</span>
-  <h2 class="display">De una captura de pantalla a un tejado limpio.</h2>
+  <h2 class="display">Limpieza de placas solares, de una captura a un tejado limpio.</h2>
   <div class="verbs">
     <div class="verb"><span class="n">1</span><h3>Mides.</h3><p>Nos mandas una captura de tu inversor. En 48 h sabes cuánto pierdes.</p></div>
     <div class="verb"><span class="n">2</span><h3>Decides.</h3><p>Estudiamos tu cubierta y te damos un precio cerrado.</p></div>
@@ -275,12 +347,12 @@ form .btn{width:100%}
 <section class="report"><div class="wrap report-grid">
   <div>
     <span class="kicker">El informe</span>
-    <h2 class="display">Mantenimiento solar, con pruebas.</h2>
+    <h2 class="display">Mantenimiento de placas solares, con pruebas.</h2>
     <ul>
-      <li><b>Limpieza profesional</b><span>Agua tratada y cepillos específicos, sin químicos agresivos.</span></li>
+      <li><b><a href="/limpieza-placas-solares-naves-industriales/" style="text-decoration:none">Limpieza profesional</a></b><span>Agua tratada y cepillos específicos, sin químicos agresivos.</span></li>
       <li><b>Inspección módulo a módulo</b><span>Roturas, fijaciones, cableado y sombras nuevas, localizadas en el mapa de tu cubierta.</span></li>
       <li><b>Producción antes y después</b><span>Comparada con la esperada para tu ubicación. Lista para tus auditorías.</span></li>
-      <li><b>Plan anual</b><span>Limpiezas programadas y seguimiento de tu producción.</span></li>
+      <li><b><a href="/mantenimiento-placas-solares/" style="text-decoration:none">Plan anual</a></b><span>Limpiezas programadas y seguimiento de tu producción.</span></li>
     </ul>
   </div>
   <div class="paper-stack">
@@ -324,15 +396,33 @@ form .btn{width:100%}
   <ul><li>Logística</li><li>Industria</li><li>Agroalimentaria</li><li>Áridos</li><li>Reciclaje</li><li>Retail</li></ul>
 </div></section>
 
+<section class="steps center" id="servicios"><div class="wrap">
+  <span class="kicker">Servicios y zonas</span>
+  <h2 class="display">Limpieza de paneles solares en toda España.</h2>
+  <div class="cards4">
+    <a href="/limpieza-placas-solares-naves-industriales/"><small>Servicio</small><b>Limpieza en naves industriales</b><span>Cubiertas grandes, trabajo seguro en altura y sin parar tu actividad.</span><i>Ver servicio →</i></a>
+    <a href="/mantenimiento-placas-solares/"><small>Servicio</small><b>Mantenimiento de placas solares</b><span>Inspección módulo a módulo, seguimiento de producción y plan anual.</span><i>Ver servicio →</i></a>
+    <a href="/limpieza-placas-solares-madrid/"><small>Zona</small><b>Limpieza de placas solares en Madrid</b><span>Getafe, Alcalá, Fuenlabrada, Coslada, Torrejón y toda la Comunidad.</span><i>Ver zona →</i></a>
+    <a href="/como-limpiar-placas-solares/"><small>Guía</small><b>Cómo limpiar placas solares</b><span>Paso a paso, qué no hacer nunca y qué cambia en una nave.</span><i>Leer guía →</i></a>
+  </div>
+  <div class="seo-text">
+    <p>Las placas solares de una empresa trabajan a la intemperie todo el año. El polvo, los excrementos de aves, la contaminación del tráfico o la calima se acumulan sobre el vidrio y restan producción poco a poco. La lluvia ayuda, pero no basta: no se lleva lo que está pegado y, en verano, cuando más producen los paneles, casi no llueve.</p>
+    <p>En BluRuf nos dedicamos a la <strong>limpieza y el mantenimiento de placas solares para empresas</strong>: naves industriales, almacenes logísticos, oficinas, comercios y explotaciones agroalimentarias. Primero medimos cuánto pierde tu instalación comparando su producción real con la esperada según PVGIS. Si compensa, limpiamos los paneles con agua tratada y cepillos específicos, revisamos la instalación módulo a módulo y te entregamos un informe con la producción antes y después.</p>
+    <p>Trabajamos en toda España. En la Comunidad de Madrid cubrimos todos los polígonos, desde <a href="/limpieza-placas-solares-madrid/getafe/">Getafe</a> y <a href="/limpieza-placas-solares-madrid/fuenlabrada/">Fuenlabrada</a> hasta <a href="/limpieza-placas-solares-madrid/alcala-de-henares/">Alcalá de Henares</a> y <a href="/limpieza-placas-solares-madrid/torrejon-de-ardoz/">Torrejón de Ardoz</a>.</p>
+  </div>
+</div></section>
+
 <section class="faq center" id="preguntas"><div class="wrap">
   <span class="kicker">Preguntas frecuentes</span>
-  <h2 class="display">Antes de limpiar tus placas, lee esto.</h2>
+  <h2 class="display">Limpieza de placas solares: antes de nada, lee esto.</h2>
   <div class="faq-list">
     <details open><summary>¿Cada cuánto hay que limpiarlas?</summary><p>En general, 1 o 2 veces al año. En zonas secas, con polvo o con aves, más. El diagnóstico te lo dice con tus datos.</p></details>
     <details><summary>¿Compensa siempre?</summary><p>No. Por eso medimos antes de proponerte nada.</p></details>
     <details><summary>¿Y la seguridad?</summary><p>Trabajar en altura exige formación, líneas de vida y seguro. Lo revisamos antes de que nadie suba.</p></details>
     <details><summary>¿Paráis mi actividad?</summary><p>No. Trabajamos en cubierta y a tu horario.</p></details>
-    <details><summary>¿Dónde trabajáis?</summary><p>En toda España. Trabajamos con una red de equipos locales para llegar a tu nave estés donde estés.</p></details>
+    <details><summary>¿Cuánto cuesta limpiar placas solares?</summary><p>Depende del número de paneles, del acceso a la cubierta y del tipo de suciedad. Por eso empezamos por el diagnóstico gratis: con tus datos te damos un precio cerrado, sin sorpresas.</p></details>
+    <details><summary>¿Con qué limpiáis los paneles?</summary><p>Con agua tratada, baja en minerales para que no deje marcas, y cepillos específicos para placas. Nunca agua a presión ni productos agresivos. Te lo explicamos en nuestra <a href="/como-limpiar-placas-solares/">guía para limpiar placas solares</a>.</p></details>
+    <details><summary>¿Dónde trabajáis?</summary><p>En toda España. Cuéntanos dónde está tu nave y en 48 h tienes tu diagnóstico. En la Comunidad de Madrid cubrimos todos los polígonos: mira nuestra página de <a href="/limpieza-placas-solares-madrid/">limpieza de placas solares en Madrid</a>.</p></details>
   </div>
 </div></section>
 
@@ -381,6 +471,12 @@ form .btn{width:100%}
   <div class="wrap">
     <a href="/" class="logo"><img src="/img/logo-blanco.svg" alt="BluRuf" width="150" height="37"></a>
     <div class="fcols">
+      <div><h4>Servicios y zonas</h4><ul>
+        <li><a href="/limpieza-placas-solares-naves-industriales/">Limpieza en naves industriales</a></li>
+        <li><a href="/mantenimiento-placas-solares/">Mantenimiento de placas solares</a></li>
+        <li><a href="/limpieza-placas-solares-madrid/">Limpieza de placas solares en Madrid</a></li>
+        <li><a href="/como-limpiar-placas-solares/">Cómo limpiar placas solares</a></li>
+      </ul></div>
       <div><h4>Colabora con BluRuf</h4><ul>
         <li><a href="/red.html">Red de partners</a></li>
         <li><a href="/colabora.html#instaladores">Instaladores e ingenierías</a></li>
@@ -389,7 +485,6 @@ form .btn{width:100%}
       <div><h4>Enlaces de interés</h4><ul>
         <li><a href="/#como-funciona">Cómo funciona</a></li>
         <li><a href="/#calculadora">Calculadora de pérdidas</a></li>
-        <li><a href="/#preguntas">Preguntas frecuentes</a></li>
         <li><a href="/#contacto">Diagnóstico gratis</a></li>
         <li><a href="mailto:info@bluruf.com">info@bluruf.com</a></li>
         <li><a href="tel:+34711241290">711 24 12 90</a></li>
@@ -401,7 +496,7 @@ form .btn{width:100%}
         <li><a href="/cookies.html">Política de cookies</a></li>
       </ul></div>
     </div>
-    <div class="fbottom"><span>© 2026 BluRuf</span><span>BluRuf | Mantenimiento solar para empresas | España</span></div>
+    <div class="fbottom"><span>© 2026 BluRuf</span><span>BluRuf | Limpieza y mantenimiento de placas solares para empresas | España</span></div>
   </div>
 </footer>
 
