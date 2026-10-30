@@ -3,6 +3,16 @@ https://www.bluruf.es/*  https://bluruf.com/:splat  301!
 http://bluruf.es/*       https://bluruf.com/:splat  301!
 http://www.bluruf.es/*   https://bluruf.com/:splat  301!
 
-# Copia antigua de la portada dentro de /img/: se redirige a la home
+# Copia antigua de la portada dentro de /img/
 /img/             /    301!
 /img/index.html   /    301!
+
+# Guía antigua: ahora está en el blog
+/como-limpiar-placas-solares          /blog/como-limpiar-placas-solares/  301!
+/como-limpiar-placas-solares/         /blog/como-limpiar-placas-solares/  301!
+/como-limpiar-placas-solares/*        /blog/como-limpiar-placas-solares/  301!
+
+# Páginas de zonas eliminadas: van a la portada
+/limpieza-placas-solares-madrid       /  301!
+/limpieza-placas-solares-madrid/      /  301!
+/limpieza-placas-solares-madrid/*     /  301!

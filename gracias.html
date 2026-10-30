@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Solicitud recibida | BluRuf</title>
 <meta name="description" content="Hemos recibido tu solicitud.">
-<meta name="robots" content="noindex">
 <link rel="canonical" href="https://bluruf.com/gracias.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
@@ -18,115 +18,66 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=2">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#0047AA">
 <style>
-@font-face{font-family:"Bricolage Grotesque";src:url(/fonts/bricolage.woff2) format("woff2");font-weight:200 800;font-display:swap}
-@font-face{font-family:"Figtree";src:url(/fonts/figtree.woff2) format("woff2");font-weight:300 900;font-display:swap}
+.iso-shine{animation:isoShine 5s ease-in-out infinite}
+@keyframes isoShine{0%,20%{transform:translateX(0)}70%,100%{transform:translateX(var(--d))}}
+.iso-sway{animation:isoSway 4s ease-in-out infinite alternate}
+@keyframes isoSway{from{transform:rotate(-1.6deg)}to{transform:rotate(1.6deg)}}
+.iso-spin{animation:isoSpin 30s linear infinite}
+@keyframes isoSpin{to{transform:rotate(360deg)}}
+.iso-bob{animation:isoBob 3.2s ease-in-out infinite}
+@keyframes isoBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.iso-rotor{animation:isoRotor .18s linear infinite}
+@keyframes isoRotor{50%{transform:scaleX(.25)}}
+.iso-clean{animation:isoClean 7s ease-in-out infinite}
+@keyframes isoClean{0%,8%{transform:translate(0,0)}50%,58%{transform:translate(var(--dx),var(--dy))}100%{transform:translate(0,0)}}
+.iso-drop{animation:isoDrop 1.1s ease-in infinite;opacity:0}
+@keyframes isoDrop{0%{opacity:0;transform:translate(0,-4px)}30%{opacity:1}100%{opacity:0;transform:translate(6px,10px)}}
+.iso-place{animation:isoPlace 4.5s ease-in-out infinite}
+@keyframes isoPlace{0%,10%{transform:translateY(-28px);opacity:0}35%,80%{transform:translateY(0);opacity:1}100%{transform:translateY(0);opacity:0}}
+.iso-bar{transform-box:fill-box;transform-origin:50% 100%;animation:isoBar 2.6s ease-in-out infinite alternate}
+@keyframes isoBar{from{transform:scaleY(.45)}to{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.iso *{animation:none!important}}
+</style>
 
-</style>
-<style>
-:root{--sky:#F3F6FC;--blue:#0047AA;--navy:#061A47;--sun:#FCCB31;--muted:#4E5B7A}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{overflow-x:clip}
-body{font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.65;color:var(--navy);background:var(--sky);-webkit-font-smoothing:antialiased}
-a{color:var(--blue)}
-.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
-header{padding:22px 0}
-header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.logo{display:inline-flex;align-items:center;line-height:0;text-decoration:none}
-.logo img{height:30px;width:auto;display:block}
-footer .logo img{height:28px}
-.back{font-weight:700;text-decoration:none;color:var(--navy);font-size:16px}
-.back:hover{color:var(--blue)}
-main{padding:clamp(40px,7vw,100px) 0 90px}
-.doc{max-width:760px}
-.kicker{font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
-h1{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.022em;line-height:1.02;font-size:clamp(46px,7vw,104px);margin:14px 0 18px}
-.upd{color:var(--muted);font-size:15px;margin-bottom:48px}
-h2{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;font-size:clamp(24px,2.4vw,30px);line-height:1.15;margin:44px 0 12px}
-p,ul,table{margin-bottom:14px}
-ul{padding-left:22px}
-li{margin-bottom:6px}
-.card{margin:6px 0 22px;background:#fff;border-radius:20px;padding:clamp(20px,3vw,32px);box-shadow:0 20px 50px -30px rgba(6,26,71,.35)}
-.card dl{display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr);gap:10px 20px}
-.card dt{font-weight:700}
-.card dd{overflow-wrap:anywhere}
-table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;font-size:15px}
-th,td{text-align:left;padding:12px 14px;border-bottom:1px solid #E3E9F6;vertical-align:top}
-th{background:var(--navy);color:#fff;font-weight:600}
-.tw{overflow-x:auto}
-@media(max-width:560px){.card dl{grid-template-columns:minmax(0,1fr);gap:2px}.card dd{margin-bottom:10px}}
-.ok{padding:clamp(60px,10vw,140px) 0;min-height:60vh;text-align:center}
-.ok h1{font-size:clamp(44px,6vw,84px);max-width:14ch;margin:0 auto}
-.ok p{font-size:clamp(18px,1.6vw,21px);color:var(--muted);max-width:32em;margin:24px auto 34px}
-.btn{display:inline-flex;font:700 17px "Figtree",system-ui,sans-serif;border-radius:999px;padding:16px 28px;text-decoration:none;background:var(--blue);color:#fff}
-.panel-ok{display:inline-block;width:64px;height:22px;background:var(--sun);border-radius:3px;transform:skewX(-22deg) rotate(-18deg);margin-bottom:34px}
-/* Pie */
-.foot{background:var(--navy);color:#B8C6E6;position:relative;margin-top:60px;padding:90px 0 36px;font-size:15.5px}
-.foot::before{content:"";position:absolute;left:0;right:0;top:-59px;height:60px;background:var(--navy);clip-path:ellipse(75% 100% at 50% 100%)}
-.foot .logo img{height:30px}
-.fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:44px;text-align:center}
-.fcols h4{color:#fff;font-size:16px;font-weight:700;margin-bottom:14px}
-.fcols ul{list-style:none;display:grid;gap:10px}
-.fcols a{text-decoration:none;color:#B8C6E6}
-.fcols a:hover{color:#fff}
-.fbottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:60px;padding-top:24px;border-top:1px solid #1C3270;font-size:14px;color:#8C9BBA}
-@media(max-width:760px){.foot .logo{display:flex;justify-content:center}.fcols{grid-template-columns:minmax(0,1fr);gap:34px}.fbottom{justify-content:center;text-align:center}}
-.foot .logo img{height:30px}
-:root{--line:#DFE5F1}
-.fcols{grid-template-columns:repeat(4,minmax(0,1fr))}
-@media(max-width:1000px) and (min-width:761px){.fcols{grid-template-columns:repeat(2,minmax(0,1fr))}}
-</style>
 </head>
 <body>
-<header><div class="wrap"><a href="/" class="logo" aria-label="BluRuf, inicio"><img src="/img/logo.svg" alt="BluRuf" width="160" height="39"></a><a href="/" class="back">← Volver a la web</a></div></header>
-<main class="ok"><div class="wrap">
-  <span class="panel-ok" aria-hidden="true"></span>
-  <h1 class="display" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;letter-spacing:-.022em;line-height:1.02">Recibido. Ya estamos en ello.</h1>
-  <p id="msg">Te escribimos en menos de 48 h con lo que está perdiendo tu tejado. Si tienes a mano una captura de la app de tu inversor, mándala a <a href="mailto:info@bluruf.com">info@bluruf.com</a> y el diagnóstico será más preciso.</p>
-  <a href="/" class="btn">Volver a la web</a>
-</div></main>
+<header class="top"><div class="wrap">
+  <a href="/" class="logo" aria-label="BluRuf, inicio"><img src="/img/logo.svg" alt="BluRuf" width="150" height="37"></a>
+  <nav class="nav" aria-label="Principal"><a href="/#casas">Casas</a><a href="/#empresas">Empresas</a><a href="/#como-funciona">Cómo funciona</a><a href="/blog/">Blog</a></nav>
+  <a href="/#precio" class="btn btn-blue">Pedir precio</a>
+</div></header>
+<main><div class="wrap"><section class="thanks"><svg class="iso iso-icon" viewBox="-87 -36 174 144" width="174" height="144" role="img" aria-label="Paso 4: recibes tu informe" xmlns="http://www.w3.org/2000/svg"><polygon points="83.1,56.0 0.0,104.0 0.0,96.0 83.1,48.0" fill="#C9D5E8" stroke="#1C2D57" stroke-width="1.15" stroke-linejoin="round" /><polygon points="-83.1,56.0 0.0,104.0 0.0,96.0 -83.1,48.0" fill="#B3C3DD" stroke="#1C2D57" stroke-width="1.15" stroke-linejoin="round" /><polygon points="0.0,0.0 83.1,48.0 0.0,96.0 -83.1,48.0" fill="#EEF2F8" stroke="#1C2D57" stroke-width="1.15" stroke-linejoin="round" /><polygon points="30.5,56.0 26.3,58.4 26.3,-5.6 30.5,-8.0" fill="#EEF2F9" stroke="#1C2D57" stroke-width="1.15" stroke-linejoin="round" /><polygon points="-15.2,34.4 26.3,58.4 26.3,-5.6 -15.2,-29.6" fill="#E6ECF6" stroke="#1C2D57" stroke-width="1.15" stroke-linejoin="round" /><polygon points="-11.1,-32.0 30.5,-8.0 26.3,-5.6 -15.2,-29.6" fill="#FFFFFF" stroke="#1C2D57" stroke-width="1.15" stroke-linejoin="round" /><polygon points="-9.7,28.0 -4.4,31.0 -4.4,15.0 -9.7,12.0" fill="#B9C8E4" stroke="#1C2D57" stroke-width="0.7" stroke-linejoin="round" /><polygon points="-1.4,32.8 3.9,35.8 3.9,10.2 -1.4,7.2" fill="#B9C8E4" stroke="#1C2D57" stroke-width="0.7" stroke-linejoin="round" /><polygon points="6.9,37.6 12.2,40.6 12.2,19.8 6.9,16.8" fill="#B9C8E4" stroke="#1C2D57" stroke-width="0.7" stroke-linejoin="round" /><polygon points="15.2,42.4 20.5,45.4 20.5,11.8 15.2,8.8" fill="#0047AA" stroke="#1C2D57" stroke-width="0.7" stroke-linejoin="round" /><polygon points="-9.7,-15.2 19.4,1.6 19.4,-1.0 -9.7,-17.8" fill="#D3DDEE" stroke="#1C2D57" stroke-width="0.5" stroke-linejoin="round" /><polygon points="-9.7,-10.4 19.4,6.4 19.4,3.8 -9.7,-13.0" fill="#D3DDEE" stroke="#1C2D57" stroke-width="0.5" stroke-linejoin="round" /><g><circle cx="22.2" cy="-3.2" r="9" fill="#2FA36B" stroke="#1C2D57" stroke-width="1"/><path d="M18.2,-3.2 l3,3 l5,-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+<h1 class="display">Recibido. Ya estamos en ello.</h1>
+<p id="msg">Te escribimos en menos de 48 h con el precio para tu instalación. Si quieres adelantar algo, escríbenos a <a href="mailto:info@bluruf.com">info@bluruf.com</a> o llámanos al 711 24 12 90.</p>
+<a href="/" class="btn btn-blue">Volver a la web</a> <a href="/blog/" class="btn btn-line">Leer el blog</a>
+</section></div></main>
+<footer class="foot"><div class="wrap">
+  <div class="fgrid">
+    <div><a href="/" class="logo"><img src="/img/logo.svg" alt="BluRuf" width="150" height="37"></a>
+      <p>BluRuf es una empresa española de limpieza, mantenimiento y revisión de placas solares para casas, comunidades y empresas.</p></div>
+    <div><h4>Servicios</h4><ul><li><a href="/#casas">Para tu casa</a></li><li><a href="/#empresas">Para tu empresa</a></li><li><a href="/mantenimiento-placas-solares/">Mantenimiento</a></li><li><a href="/limpieza-placas-solares-naves-industriales/">Limpieza en naves</a></li><li><a href="/#calculadora">Calculadora</a></li><li><a href="/#precio">Pedir precio</a></li></ul></div>
+    <div><h4>Blog</h4><ul><li><a href="/blog/cada-cuanto-limpiar-placas-solares/">¿Cada cuánto hay que limpiar las placas solares?</a></li><li><a href="/blog/precio-limpieza-placas-solares/">¿Cuánto cuesta limpiar placas solares en 2026?</a></li><li><a href="/blog/cuanto-pierden-placas-solares-sucias/">¿Cuánto producen menos unas placas solares sucias?</a></li><li><a href="/blog/como-limpiar-placas-solares/">Cómo limpiar placas solares sin dañarlas</a></li><li><a href="/blog/">Todos los artículos</a></li></ul></div>
+    <div><h4>Colabora</h4><ul><li><a href="/colabora.html#instaladores">Instaladoras e ingenierías</a></li><li><a href="/red.html">Empresas de limpieza</a></li><li><a href="/colabora.html#equipo">Trabaja con nosotros</a></li></ul></div>
+    <div><h4>Contacto</h4><ul><li><a href="tel:+34711241290">711 24 12 90</a></li><li><a href="mailto:info@bluruf.com">info@bluruf.com</a></li><li><a href="https://www.linkedin.com/company/bluruf" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+  </div>
+  <div class="fbottom"><span>© 2026 BluRuf | <a href="/aviso-legal.html">Aviso legal</a> | <a href="/privacidad.html">Privacidad</a> | <a href="/cookies.html">Cookies</a></span><span>Limpieza y mantenimiento de placas solares | España</span></div>
+</div></footer>
 <script>
-(function(){const f=new URLSearchParams(location.search).get('f'),m=document.getElementById('msg'),h=document.querySelector('h1');
-const T={red:['Bienvenido a la red.','Revisamos tu solicitud y te llamamos en 48 h. Si quieres adelantar, envía tu seguro de responsabilidad civil y la documentación de prevención a <a href="mailto:info@bluruf.com">info@bluruf.com</a>.'],
+(function(){var h=document.querySelector('header.top');function s(){h.classList.toggle('scrolled',scrollY>8)}addEventListener('scroll',s,{passive:true});s();})();
+</script>
+<script>
+(function(){var f=new URLSearchParams(location.search).get('f'),m=document.getElementById('msg'),h=document.querySelector('.thanks h1');
+var T={red:['Gracias. Revisamos tu solicitud.','Te llamamos en 48 h. Si quieres adelantar, envía tu seguro de responsabilidad civil y la documentación de prevención a <a href="mailto:info@bluruf.com">info@bluruf.com</a>.'],
 instaladores:['Recibido. Hablamos pronto.','Te escribimos en menos de 48 h para ver cómo podemos colaborar. Si quieres adelantar algo, escríbenos a <a href="mailto:info@bluruf.com">info@bluruf.com</a>.'],
 trabaja:['Gracias por escribirnos.','Leemos todas las candidaturas con calma. Si tu perfil encaja con lo que buscamos, te llamamos.']};
 if(T[f]){h.textContent=T[f][0];m.innerHTML=T[f][1];}})();
 </script>
-<footer class="foot">
-  <div class="wrap">
-    <a href="/" class="logo"><img src="/img/logo-blanco.svg" alt="BluRuf" width="150" height="37"></a>
-    <div class="fcols">
-      <div><h4>Servicios y zonas</h4><ul>
-        <li><a href="/limpieza-placas-solares-naves-industriales/">Limpieza en naves industriales</a></li>
-        <li><a href="/mantenimiento-placas-solares/">Mantenimiento de placas solares</a></li>
-        <li><a href="/limpieza-placas-solares-madrid/">Limpieza de placas solares en Madrid</a></li>
-        <li><a href="/como-limpiar-placas-solares/">Cómo limpiar placas solares</a></li>
-      </ul></div>
-      <div><h4>Colabora con BluRuf</h4><ul>
-        <li><a href="/red.html">Red de partners</a></li>
-        <li><a href="/colabora.html#instaladores">Instaladores e ingenierías</a></li>
-        <li><a href="/colabora.html#equipo">Trabaja con nosotros</a></li>
-      </ul></div>
-      <div><h4>Enlaces de interés</h4><ul>
-        <li><a href="/#como-funciona">Cómo funciona</a></li>
-        <li><a href="/#calculadora">Calculadora de pérdidas</a></li>
-        <li><a href="/#contacto">Diagnóstico gratis</a></li>
-        <li><a href="mailto:info@bluruf.com">info@bluruf.com</a></li>
-        <li><a href="tel:+34711241290">711 24 12 90</a></li>
-        <li><a href="https://www.linkedin.com/company/bluruf" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul></div>
-      <div><h4>Legal</h4><ul>
-        <li><a href="/aviso-legal.html">Aviso legal</a></li>
-        <li><a href="/privacidad.html">Política de privacidad</a></li>
-        <li><a href="/cookies.html">Política de cookies</a></li>
-      </ul></div>
-    </div>
-    <div class="fbottom"><span>© 2026 BluRuf</span><span>BluRuf | Limpieza y mantenimiento de placas solares para empresas | España</span></div>
-  </div>
-</footer>
 </body>
 </html>

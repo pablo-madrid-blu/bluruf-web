@@ -1,0 +1,24 @@
+# BluRuf
+
+> BluRuf es una empresa española de limpieza, mantenimiento y revisión de placas solares para casas, comunidades de vecinos y empresas. Sede en Madrid (Calle Gobelas, 35). Teléfono 711 24 12 90. Correo info@bluruf.com.
+
+## Servicios
+- Limpieza de placas solares con agua desmineralizada y cepillos suaves, sin químicos ni agua a presión.
+- Revisión visual de placas, estructura, cableado e inversor.
+- Informe con fotos del antes y el después.
+- Planes anuales de 1 limpieza (viviendas) o de 1 a 2 limpiezas (empresas y naves).
+- Precio cerrado y sin compromiso: https://bluruf.com/#precio
+
+## Guías
+- [¿Cada cuánto hay que limpiar las placas solares?](https://bluruf.com/blog/cada-cuanto-limpiar-placas-solares/): Cada cuánto limpiar las placas solares de una casa o de una nave: frecuencia recomendada, mejor época del año y señales de que toca limpiarlas.
+- [¿Cuánto cuesta limpiar placas solares en 2026?](https://bluruf.com/blog/precio-limpieza-placas-solares/): Precios orientativos de la limpieza de placas solares en 2026 para casas, comunidades y naves, qué influye en el precio y cuándo compensa.
+- [¿Cuánto producen menos unas placas solares sucias?](https://bluruf.com/blog/cuanto-pierden-placas-solares-sucias/): Cuánta producción pierden las placas solares por suciedad, qué son los puntos calientes y cómo calcular cuánto dinero pierde tu instalación.
+- [Cómo limpiar placas solares sin dañarlas](https://bluruf.com/blog/como-limpiar-placas-solares/): Cómo limpiar placas solares paso a paso: qué agua y qué cepillo usar, qué no hacer nunca y cuándo es mejor llamar a profesionales.
+
+## Servicios en detalle
+- [Mantenimiento de placas solares](https://bluruf.com/mantenimiento-placas-solares/)
+- [Limpieza de placas solares en naves industriales](https://bluruf.com/limpieza-placas-solares-naves-industriales/)
+
+## Otras páginas
+- [Colabora con BluRuf (instaladoras)](https://bluruf.com/colabora.html)
+- [Aviso legal](https://bluruf.com/aviso-legal.html)
